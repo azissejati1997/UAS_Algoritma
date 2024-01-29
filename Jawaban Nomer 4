@@ -1,0 +1,47 @@
+code bintang :
+#include<iostream>
+
+using namespace std;
+
+int main() {
+    int N;
+
+    // Input nilai N dari pengguna
+    cout << "Masukkan nilai N: ";
+    cin >> N;
+
+    // Mencetak segitiga bintang
+    for (int i = 1; i <= N; ++i) {
+        // Mencetak bintang sebanyak i pada baris ke-i
+        for (int j = 1; j <= i; ++j) {
+            cout << "* ";
+        }
+        // Pindah ke baris berikutnya setelah mencetak bintang pada baris ke-i
+        cout << endl;
+    }
+
+    return 0;
+}
+#include<iostream>
+
+using namespace std;
+
+int main() {
+    int N;
+
+    // Input nilai N dari pengguna
+    cout << "Masukkan nilai N: ";
+    cin >> N;
+
+    // Mencetak segitiga bintang
+    for (int i = 1; i <= N; ++i) {
+        // Mencetak bintang sebanyak i pada baris ke-i
+        for (int j = 1; j <= i; ++j) {
+            cout << "* ";
+        }
+        // Pindah ke baris berikutnya setelah mencetak bintang pada baris ke-i
+        cout << endl;
+    }
+
+    return 0;
+}
