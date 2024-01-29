@@ -1,0 +1,31 @@
+Code :
+
+#include <iostream>
+#include <string>
+
+int main() {
+    // Mendapatkan nomor handphone utuh
+    std::string nomorHp;
+    std::cout << "Masukkan nomor handphone Anda: ";
+    std::cin >> nomorHp;
+
+    // Mengonversi setiap digit nomor handphone ke integer dan inisialisasi nilai terkecil, terbesar, dan jumlah
+    int nilaiMin = 9; // Inisialisasi dengan nilai maksimal yang mungkin
+    int nilaiMax = 0; // Inisialisasi dengan nilai minimal yang mungkin
+    int jumlah = 0;
+
+    for (char digit : nomorHp) {
+        int nilaiDigit = digit - '0'; // Mengonversi karakter ke integer
+        nilaiMin = std::min(nilaiMin, nilaiDigit);
+        nilaiMax = std::max(nilaiMax, nilaiDigit);
+        jumlah += nilaiDigit;
+    }
+
+    // Menampilkan hasil
+    std::cout << "Nilai terkecil dari nomor handphone: " << nilaiMin << std::endl;
+    std::cout << "Nilai terbesar dari nomor handphone: " << nilaiMax << std::endl;
+    std::cout << "Jumlah nilai dari " << nilaiMin << " sampai " << nilaiMax << " adalah: " << jumlah << std::endl;
+    std::cout << "Program oleh Abdul Azis" << std::endl;
+
+    return 0;
+}
