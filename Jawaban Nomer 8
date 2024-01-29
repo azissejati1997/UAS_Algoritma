@@ -1,0 +1,46 @@
+#include <iostream>
+#include <queue>
+#include <string>
+
+using namespace std;
+
+// Struktur data untuk lagu
+struct Lagu {
+    string judul;
+    string artis;
+};
+
+// Fungsi untuk menampilkan lagu dari playlist
+void tampilkanPlaylist(queue<Lagu> &playlist) {
+    queue<Lagu> duplikat = playlist;
+
+    while (!duplikat.empty()) {
+        Lagu lagu = duplikat.front();
+        duplikat.pop();
+        cout << "Judul: " << lagu.judul << ", Artis: " << lagu.artis << endl;
+    }
+}
+
+int main() {
+    // Buat objek queue untuk playlist
+    queue<Lagu> playlist;
+
+    // Tambahkan lagu-lagu favorit ke dalam playlist
+    Lagu lagu1 = {"Tak Bisakah", "Peterpan"};
+    Lagu lagu2 = {"Mungkin Nanti", "Peterpan"};
+    Lagu lagu3 = {"Diatas Normal", "Peterpan"};
+    Lagu lagu4 = {"Bintang DISURGA", "Peterpan"};
+    Lagu lagu5 = {"Jauh Mimpiku", "Peterpan"};
+
+    playlist.push(lagu1);
+    playlist.push(lagu2);
+    playlist.push(lagu3);
+    playlist.push(lagu4);
+    playlist.push(lagu5);
+
+    // Tampilkan playlist
+    cout << "Playlist Favorit (Playlist " << "Abdul Azis" << "):" << endl;
+    tampilkanPlaylist(playlist);
+
+    return 0;
+}
