@@ -1,1 +1,38 @@
+Code BujurSangkar :
+#include <iostream>
 
+using namespace std;
+
+int main() {
+    double sisi, luas;
+
+    cout << "Masukkan panjang sisi bujursangkar: ";
+    cin >> sisi;
+
+    luas = sisi * sisi;
+
+    cout << "Luas bujursangkar: " << luas << endl;
+
+    return 0;
+}
+
+Code Segitiga:
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    double alas, tinggi, luas;
+
+    cout << "Masukkan panjang alas segitiga: ";
+    cin >> alas;
+
+    cout << "Masukkan tinggi segitiga: ";
+    cin >> tinggi;
+
+    luas = 0.5 * alas * tinggi;
+
+    cout << "Luas segitiga: " << luas << endl;
+
+    return 0;
+}
